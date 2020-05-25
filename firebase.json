@@ -1,0 +1,38 @@
+{
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ],
+    "source": "functions"
+  },
+  "hosting": {
+    "public": "client/build",
+    "rewrites": [
+      {
+        "source": "/login",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/api/login",
+        "function": "app"
+      },
+      {
+        "source": "/api/todos",
+        "function": "app"
+      },
+      {
+        "source": "/api/user",
+        "function": "app"
+      },
+      {
+        "source": "/api/todo/**",
+        "function": "app"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
