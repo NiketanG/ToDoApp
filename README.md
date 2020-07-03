@@ -20,7 +20,7 @@ firebase init
 ```
 - Select Cloud Functions and Hosting. 
 - Clone the repo Overwrite existing files. 
-- Configure your Firebase Credentials in a config file, and update the paths in Functions. 
+- Configure your Firebase Credentials in a config file (functions/util/config), and update the paths in Functions. 
 - Create OAuth2 Client in Google Cloud Console and Use the Client ID in Client App.
 - Fire up the client app using :
 
